@@ -1,0 +1,51 @@
+
+.loader {
+   position: fixed;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   background: $bg;
+   opacity: 0;
+   z-index: -1;
+}
+.loader__items {
+   position: relative;
+   top: 50%;
+   left: 50%;
+   width: 70px;
+   height: 70px;
+   margin-top: -35px;
+   margin-left: -35px;
+   text-align: center;
+   animation: loader-rotate 1.3s infinite linear;
+   animation-fill-mode: forwards;
+}
+
+.loader__item {
+   position: absolute;
+   display: inline-block;
+   top: 0;
+   background-color: $red;
+   border-radius: 100%;
+   width: 35px;
+   height: 35px;
+   animation: loader-bounce 1.3s infinite ease-in-out;
+   animation-fill-mode: forwards;
+}
+
+.loader__item:last-child {
+   top: auto;
+   bottom: 0;
+   animation-delay: -1s;
+}
+
+.loaded__hiding .loader {
+   transition: all .2s ease;
+   opacity: 1;
+   z-index: 10;
+}
+
+.loaded .loader {
+   display: none;
+}

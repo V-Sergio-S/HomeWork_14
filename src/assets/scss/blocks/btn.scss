@@ -1,0 +1,16 @@
+.btn{
+   background: $btn;
+   border-radius: 40px;
+   border: 0;
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 27px;
+   cursor: pointer;
+
+   color: $white;
+   transition: background .4s ease;
+   
+   &:hover{
+      background: darken($btn, 15%);
+   }
+}
