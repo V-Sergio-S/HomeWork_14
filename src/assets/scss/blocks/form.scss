@@ -1,8 +1,12 @@
 
 .form-section {
    width: 100%;
-   padding: 5px;
    position: relative;
+
+   @media screen and ( max-width: $laptop-bp) {
+      padding: 0 15px;
+}
+
 }
 .container{
    display: flex;
@@ -18,6 +22,10 @@
       @media screen and ( max-width: $laptop-bp) {
          padding: 194px 0px 194px 0;
   }
+
+  @media screen and ( max-width: $tapik-bp) {
+   padding: 50px 0px 50px 0;
+}
 }
 .form-section__title {
    width: 262px;
@@ -25,6 +33,7 @@
    position: absolute;
    top:27px;
    left: calc(50% - 115px);
+
 }
 .title{
    font-weight: 900;
@@ -33,6 +42,10 @@
    text-transform: uppercase;
 
    color: $black;
+
+   @media screen and ( max-width: $tapik-bp) {
+      font-size: 32px;
+}
 }
 
 .form-section__red {
@@ -46,6 +59,10 @@
    line-height: 49px;
 
    color: $black;
+
+   @media screen and ( max-width: $tapik-bp) {
+      font-size: 30px;
+   }
 }
 .form-section__text{
    margin-top: 7px;
@@ -53,6 +70,10 @@
    line-height: 27px;
 
    color: $carbone;
+
+   @media screen and ( max-width: $tapik-bp) {
+      font-size: 18px;
+   }
 }
 .form{
    margin: 42px 0;
