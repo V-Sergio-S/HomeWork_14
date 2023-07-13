@@ -40,16 +40,11 @@ const validForm = (formSelector,checkboxSelector,nameSelector, userNameSelector,
    const haveAccountLink = (e) => {
       stopDefAction(e)
       if (haveAccount.innerText === 'Already have an account?') {
-         try {
             signIn(text, btn, fullName, eMail, repeat, checkbox, haveAccount)
-         } catch{}
          loading()
       } else {
-         try {
             location. reload()
-         } catch{}
          loading()
-
       }
    } 
 
@@ -69,7 +64,7 @@ const validForm = (formSelector,checkboxSelector,nameSelector, userNameSelector,
       if (haveAccount.innerText === 'Registration') {
          try {
             accountWelcome(text, btn, yourUsername, password, haveAccount)
-         } catch{}
+         } catch (e) {console.log('Ошибка', e.massage)}
       }
    }
 
@@ -82,9 +77,7 @@ const validForm = (formSelector,checkboxSelector,nameSelector, userNameSelector,
 
    function haveAccountBtn () {
       clearForm()
-      try {
-         signIn(text, btn, fullName, eMail, repeat, checkbox, haveAccount)
-      } catch{}
+      signIn(text, btn, fullName, eMail, repeat, checkbox, haveAccount)
       loading()
    }
 

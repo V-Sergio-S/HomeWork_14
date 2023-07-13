@@ -1,7 +1,7 @@
 import addClass from "../Portion/addClass"
 import removeClass from "../Portion/removeClass"
 
-const checkDotInput = (selector, selectorBtn) => {
+const checkDotInputs = (selector, selectorBtn) => {
 
       const Client = JSON.parse(localStorage.getItem('dataClient'))  
 
@@ -23,8 +23,8 @@ const checkDotInput = (selector, selectorBtn) => {
                }
                })
            }
-      } catch{}
+      } catch (e) {console.log('Ошибка', e.massage)}
 
 
 }
-export default checkDotInput
+export default checkDotInputs

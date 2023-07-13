@@ -17,7 +17,7 @@ const conditions = (fullName, yourUsername, eMail, password, repeat, checkbox, b
       } else {
          removeClass(fullName)
       }
-   } catch{}
+   } catch (e) {console.log('Ошибка', e.massage)}
 
       if (!yourUsername.value || yourUsername.value.length < 3 ) {
          hasError = true
@@ -33,7 +33,7 @@ const conditions = (fullName, yourUsername, eMail, password, repeat, checkbox, b
       } else {
          removeClass(eMail)
       }
-   } catch{}
+   } catch (e) {console.log('Ошибка', e.massage)}
 
       if (!password.value && password.value.length < 8) {
          hasError = true
@@ -49,7 +49,7 @@ const conditions = (fullName, yourUsername, eMail, password, repeat, checkbox, b
       } else {
          removeClass(repeat)
       }
-   } catch{}
+   } catch (e) {console.log('Ошибка', e.massage)}
 
    try {
       if (!checkbox.checked) {
@@ -58,7 +58,7 @@ const conditions = (fullName, yourUsername, eMail, password, repeat, checkbox, b
       } else {
          checkbox.nextElementSibling.nextElementSibling.style.display = 'none'
       }
-   } catch{}
+   } catch (e) {console.log('Ошибка', e.massage)}
 
       if (!hasError && btn.value === 'Sign Up' ) {
 
