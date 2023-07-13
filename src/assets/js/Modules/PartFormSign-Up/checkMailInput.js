@@ -1,7 +1,7 @@
 import addClass from "../Portion/addClass"
 import removeClass from "../Portion/removeClass"
 
-const checkMailInputs = (selector) => {
+const checkMailInput = (selector) => {
    const emailRegexp = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu
 
    function isEmailValid(value) {
@@ -20,4 +20,4 @@ const checkMailInputs = (selector) => {
   
   selector.addEventListener('input', onInput)
 }
-export default checkMailInputs
+export default checkMailInput

@@ -1,4 +1,7 @@
-
+import addClass from "../Portion/addClass"
+import removeClass from "../Portion/removeClass"
+import saveLocalstorage from "../Portion/saveLocalStorage"
+import popup from "../Portion/popup"
 
 const conditions = (fullName, yourUsername, eMail, password, repeat, checkbox, btn) => {
 
@@ -57,6 +60,10 @@ const conditions = (fullName, yourUsername, eMail, password, repeat, checkbox, b
       }
    } catch{}
 
+      if (!hasError && btn.value === 'Sign Up' ) {
 
+         saveLocalstorage(fullName, yourUsername, password) 
+         popup('#layer', '[data-close]')
+         }
 }
 export default conditions
