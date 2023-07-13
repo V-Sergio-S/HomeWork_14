@@ -1,11 +1,11 @@
 
-import checkNumInputs from "./PartFormSign-Up/checkNumInputs"
-import checkDotInputs from "./PartFormSign-Up/checkDotInput"
-import checkMailInputs from "./PartFormSign-Up/checkMailInput"
+import checkNumInput from "./PartFormSign-Up/checkNumInput"
+import checkDotInput from "./PartFormSign-Up/checkDotInput"
+import checkMailInput from "./PartFormSign-Up/checkMailInput"
 import checkPassword from "./PartFormSign-Up/checkPasswordInput"
 import checkRepeat from "./PartFormSign-Up/checkRepeat"
-import signIn from "./PartFormSigh-In/signIn"
-import accountWelcome from "./PartFormSigh-In/welcomeAccount"
+import signIn from "./PartFormSign-In/signIn"
+import accountWelcome from "./PartFormSign-In/welcomeAccount"
 import conditions from "./PartFormSign-Up/conditionSign-Up"
 import loading from "./Portion/loading"
 import clearForm from "./Portion/clearForm"
@@ -40,16 +40,11 @@ const validForm = (formSelector,checkboxSelector,nameSelector, userNameSelector,
    const haveAccountLink = (e) => {
       stopDefAction(e)
       if (haveAccount.innerText === 'Already have an account?') {
-         try {
             signIn(text, btn, fullName, eMail, repeat, checkbox, haveAccount)
-         } catch{}
          loading()
       } else {
-         try {
             location. reload()
-         } catch{}
          loading()
-
       }
    } 
 
@@ -69,7 +64,7 @@ const validForm = (formSelector,checkboxSelector,nameSelector, userNameSelector,
       if (haveAccount.innerText === 'Registration') {
          try {
             accountWelcome(text, btn, yourUsername, password, haveAccount)
-         } catch{}
+         } catch (e) {console.log('Ошибка', e.massage)}
       }
    }
 
@@ -82,9 +77,7 @@ const validForm = (formSelector,checkboxSelector,nameSelector, userNameSelector,
 
    function haveAccountBtn () {
       clearForm()
-      try {
-         signIn(text, btn, fullName, eMail, repeat, checkbox, haveAccount)
-      } catch{}
+      signIn(text, btn, fullName, eMail, repeat, checkbox, haveAccount)
       loading()
    }
 

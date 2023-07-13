@@ -4088,8 +4088,12 @@ body {
 
 .form-section {
   width: 100%;
-  padding: 5px;
   position: relative;
+}
+@media screen and (max-width: 1070px) {
+  .form-section {
+    padding: 0 15px;
+  }
 }
 
 .container {
@@ -4108,6 +4112,11 @@ body {
     padding: 194px 0px 194px 0;
   }
 }
+@media screen and (max-width: 450px) {
+  .form-section__left {
+    padding: 50px 0px 50px 0;
+  }
+}
 
 .form-section__title {
   width: 262px;
@@ -4124,6 +4133,11 @@ body {
   text-transform: uppercase;
   color: rgb(0, 0, 0);
 }
+@media screen and (max-width: 450px) {
+  .title {
+    font-size: 32px;
+  }
+}
 
 .form-section__red {
   font-size: 48px;
@@ -4137,12 +4151,22 @@ body {
   line-height: 49px;
   color: rgb(0, 0, 0);
 }
+@media screen and (max-width: 450px) {
+  .form-section__account {
+    font-size: 30px;
+  }
+}
 
 .form-section__text {
   margin-top: 7px;
   font-size: 22px;
   line-height: 27px;
   color: rgb(99, 99, 99);
+}
+@media screen and (max-width: 450px) {
+  .form-section__text {
+    font-size: 18px;
+  }
 }
 
 .form {

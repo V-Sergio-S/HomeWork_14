@@ -12,7 +12,8 @@ const saveLocalStorage = (fullName, yourUsername, password) => {
             ClientPass = item.pass;
             
         }
-    } catch{}
+    } catch (e) {console.log('Ошибка', e.massage)}
+    
     if (yourUsername.value !== ClientLogin && password.value !== ClientPass ) {
         let clients = []
         let data = {name: fullName.value, log: yourUsername.value, pass: password.value}
