@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <title>homeWorks</title>
+</head>
+<body>
+<div class="loader">
+    <div class="loader__items">
+        <div class="loader__item"></div>
+        <div class="loader__item"></div>
+    </div>
+</div>
+<section class="form-section">
+    <div class="container">
+        <h1 class="form-section__title title  wow animate__animated animate__wobble">home<span class="form-section__red">W</span>orks</h1>
+        <div class="form-section__left">
+            <h3 class="form-section__account  wow animate__animated animate__backInLeft">Get your free account</h3>
+            <p class="form-section__text  wow animate__animated animate__fadeInBottomLeft">Try homeWorks BUSINESS free for 15 days. Downgrade to Basic (Free Forever)
+                anytime.</p>
+            <form class="form" id="formSubmit">
+                <label class="form__input-label  wow animate__animated animate__rotateInUpLeft" for="Full_Name">Full Name</label>
+                <input class="form__input" id="Full_Name" type="text" name="fullName">
+                <div class="error">Заполните поле Full Name!</div>
+                <label class="form__input-label  wow animate__animated animate__rotateInUpLeft" for="Your_username">Your username</label>
+                <input class="form__input" id="Your_username" type="text" name="userName">
+                <div class="error">Заполните поле Your username!</div>
+                <label class="form__input-label  wow animate__animated animate__rotateInUpLeft" for="E_mail">E-mail</label>
+                <input class="form__input" id="E_mail" type="text" name="e-mail">
+                <div class="error">Заполните поле E-mail!</div>
+                <label class="form__input-label  wow animate__animated animate__rotateInUpLeft" for="Password">Password</label>
+                <input class="form__input" id="Password" type="password" name="password-remain">
+                <div class="error">Пароль должен содержать не менее 8 символов</div>
+                <label class="form__input-label  wow animate__animated animate__rotateInUpLeft" for="Repeat_Password">Repeat Password</label>
+                <input class="form__input" id="Repeat_Password" type="password" name="repeat-remain">
+                <div class="error">Пароли не совпадают!</div>
+                <input class="form__agree" id="agree" type="checkbox">
+                <label class="form__label  wow animate__animated animate__fadeInTopRight" for="agree" id="agree-label">Agree to our Terms of Service and Privacy Statement</label>
+                <div class="error">Примите согласие на обработку персональных данных!</div>
+                <div class="form__action">
+                    <input class="form__btn btn  wow animate__animated animate__rotateInUpRight" type="submit" value="Sign Up" id="form__btn">
+                    <a class="form__text-ready  wow animate__animated animate__slideInLeft" href="#" data-account >Already have an account?</a>
+                </div>
+
+            </form>
+        </div>
+        <div class="form-section__right">
+            <img class="form-section__img  wow animate__animated animate__fadeInTopRight" src="assets/images/bg.png" alt="Foto">
+        </div>
+    </div>
+    <div class="over-layer" id="layer" >
+        <div class="popup animation">
+            <a class="popup__title title  wow animate__animated animate__wobble" href="/" >home<span class="form-section__red">W</span>orks</a>
+            <h4 class="popup__text">На вашу почту выслана ссылка, перейдите по ней, чтобы завершить регистрацию</h4>
+            <footer class="popup__footer">
+                <button class="popup__btn btn" data-close>ok</button>
+            </footer>
+        </div>
+    </div>
+</section>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
